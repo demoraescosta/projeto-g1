@@ -1,12 +1,18 @@
-# 🌧️ Chuvas e Deslizamentos no Estado do Rio de Janeiro (2015–2024)
+# Radar de Segurança Viária no Brasil
 
-Projeto da **Avaliação G1** — Linguagem de Programação: Análise e Visualização de Dados com Python.
+**Disciplina:** Linguagens de programação
 
-Analisa uma base simulada (960 linhas = 8 municípios × 120 meses) para responder: **quanto a chuva explica os deslizamentos, onde os impactos se concentram e em que época do ano?**
+**Professor:** Alexandre Neves Louzada
+
+**Aluno:** André de Moraes Costa
+
+Projeto da Avaliação G1 de Análise e Visualização de Dados com Python. 
+
+Analisa uma base simulada (960 linhas = 8 municípios × 120 meses) para responder: quanto a chuva explica os deslizamentos, onde os impactos se concentram e em que época do ano?
 
 ## 🔗 Links
-- Repositório: `https://github.com/SEU-USUARIO/projeto-g1`
-- Página do projeto (GitHub Pages): `https://SEU-USUARIO.github.io/projeto-g1/`
+- Repositório: <https://github.com/demoraescosta/projeto-g1>
+- Página do projeto (GitHub Pages): `https://demoraescosta.github.io/projeto-g1/`
 - Dashboard (Streamlit Cloud): `https://SEU-APP.streamlit.app`
 
 ## Principais resultados
@@ -47,5 +53,3 @@ O banco `database/chuvas.db` é gerado pela seção 7 do notebook; se não exist
 2. **GitHub Pages:** Settings → Pages → Branch `main` / pasta `/ (root)`.
 3. **Streamlit Cloud:** share.streamlit.io → New app → selecione o repositório, arquivo `app.py`.
 
-## Limitações
-Base simulada; a coluna `populacao` varia de mês a mês no mesmo município, então não foram calculadas taxas per capita.
