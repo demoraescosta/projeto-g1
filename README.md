@@ -12,8 +12,8 @@ Analisa uma base simulada (960 linhas = 8 municípios × 120 meses) para respond
 
 ## Links
 - Repositório: <https://github.com/demoraescosta/projeto-g1>
-- Página do projeto (GitHub Pages): `https://demoraescosta.github.io/projeto-g1/`
-- Dashboard (Streamlit Cloud): `https://projetolinguagemprogramacao-afqffujnhobakhtgkc425j.streamlit.app/`
+- Página do projeto (GitHub Pages): <https://demoraescosta.github.io/projeto-g1/>
+- Dashboard (Streamlit Cloud): <https://projeto-g1-9ynbappaqb2i33gmyhbe87t.streamlit.app/>
 
 ## Principais resultados
 - Correlação chuva × ocorrências ≈ **0,82** (índice de solo ≈ 0,72).
@@ -47,9 +47,4 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 O banco `database/chuvas.db` é gerado pela seção 7 do notebook; se não existir, o app lê o CSV.
-
-## Publicação
-1. **GitHub:** crie o repositório e envie a pasta (`git init && git add . && git commit -m "G1" && git push`).
-2. **GitHub Pages:** Settings → Pages → Branch `main` / pasta `/ (root)`.
-3. **Streamlit Cloud:** share.streamlit.io → New app → selecione o repositório, arquivo `app.py`.
 
