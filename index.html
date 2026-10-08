@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chuvas e Deslizamentos no RJ — Projeto G1</title>
+<style>
+:root{--bg:#0f1c2e;--card:#16273d;--tx:#e8eef6;--mut:#9fb0c6;--ac:#ff6b4a;--bl:#4cc3ff;--ln:#27405e}
+@media (prefers-color-scheme:light){:root{--bg:#f3f6fa;--card:#fff;--tx:#12202f;--mut:#51657d;--ln:#d6e0ec}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 Georgia,"Times New Roman",serif}
+h1,h2,h3,.kpi b,nav a,.tag{font-family:"Trebuchet MS",Verdana,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{padding:64px 0 40px;border-bottom:1px solid var(--ln);background:linear-gradient(180deg,rgba(76,195,255,.12),transparent)}
+.tag{display:inline-block;color:var(--bl);letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.1;margin:.3em 0}
+h1 span{color:var(--ac)}
+header p{color:var(--mut);max-width:700px;font-size:1.1rem}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{padding:11px 20px;border-radius:6px;text-decoration:none;font:600 .95rem "Trebuchet MS",sans-serif;border:1px solid var(--ln);color:var(--tx)}
+.btn.p{background:var(--ac);border-color:var(--ac);color:#fff}
+section{padding:44px 0;border-bottom:1px solid var(--ln)}
+h2{font-size:1.6rem;margin:0 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.kpi{background:var(--card);border:1px solid var(--ln);border-radius:8px;padding:18px}
+.kpi b{display:block;font-size:2rem;color:var(--ac)}
+.kpi span{color:var(--mut);font-size:.9rem}
+figure{margin:22px 0;background:var(--card);border:1px solid var(--ln);border-radius:8px;padding:14px}
+figure img{width:100%;height:auto;display:block;border-radius:4px;background:#fff}
+figcaption{color:var(--mut);font-size:.92rem;margin-top:10px}
+ul{padding-left:20px} li{margin:6px 0}
+.chips span{display:inline-block;margin:4px 6px 4px 0;padding:4px 12px;border:1px solid var(--ln);border-radius:20px;font:.85rem "Trebuchet MS",sans-serif;color:var(--mut)}
+footer{padding:28px 0;color:var(--mut);font-size:.9rem}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <span class="tag">Avaliação G1 · Análise e Visualização de Dados com Python</span>
+  <h1>Chuvas e <span>Deslizamentos</span> no Estado do Rio de Janeiro</h1>
+  <p>Quanto a chuva explica os deslizamentos? Onde os impactos se concentram e em que época do ano? Análise de 8 municípios ao longo de 10 anos (2015–2024, base simulada).</p>
+  <div class="btns">
+    <a class="btn p" href="https://SEU-APP.streamlit.app">Abrir dashboard</a>
+    <a class="btn" href="https://github.com/SEU-USUARIO/projeto-g1">Código no GitHub</a>
+    <a class="btn" href="notebooks/analise_chuvas_deslizamentos_rj.ipynb">Notebook</a>
+  </div>
+</div></header>
+
+<main class="wrap">
+<section>
+  <h2>O problema</h2>
+  <p>Encostas ocupadas e chuvas intensas formam uma combinação recorrente e letal no Rio de Janeiro. Este projeto transforma dados mensais de clima, solo e impacto em indicadores e gráficos que ajudam a priorizar prevenção.</p>
+</section>
+
+<section>
+  <h2>Indicadores principais</h2>
+  <div class="grid">
+    <div class="kpi"><b>5.426</b><span>ocorrências de deslizamento</span></div>
+    <div class="kpi"><b>54,4 mil</b><span>pessoas desalojadas</span></div>
+    <div class="kpi"><b>268</b><span>óbitos</span></div>
+    <div class="kpi"><b>0,82</b><span>correlação chuva × ocorrências</span></div>
+    <div class="kpi"><b>58%</b><span>das ocorrências em dez–mar</span></div>
+    <div class="kpi"><b>57%</b><span>das ocorrências na Região Serrana</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>O que os dados mostram</h2>
+  <figure><img src="imagens/01_sazonalidade.png" alt="Sazonalidade de chuva e ocorrências" loading="lazy">
+    <figcaption>De dezembro a março, a chuva média passa de 200 mm e as ocorrências triplicam em relação ao resto do ano.</figcaption></figure>
+  <figure><img src="imagens/02_chuva_vs_ocorrencias.png" alt="Dispersão chuva versus ocorrências" loading="lazy">
+    <figcaption>Relação positiva e forte (Pearson ≈ 0,82). Os meses classificados como 'Crítico' concentram-se nas maiores chuvas.</figcaption></figure>
+  <figure><img src="imagens/04_municipios.png" alt="Ocorrências e óbitos por município" loading="lazy">
+    <figcaption>Petrópolis, Teresópolis e Nova Friburgo (Serrana) lideram em ocorrências e óbitos.</figcaption></figure>
+  <figure><img src="imagens/03_correlacao.png" alt="Matriz de correlação" loading="lazy">
+    <figcaption>Chuva e índice de solo se associam às ocorrências; temperatura e umidade praticamente não.</figcaption></figure>
+  <figure><img src="imagens/06_serie_temporal.png" alt="Série temporal com médias móveis" loading="lazy">
+    <figcaption>Não há tendência de alta ou queda no período: a média móvel de 12 meses é quase plana.</figcaption></figure>
+</section>
+
+<section>
+  <h2>Conclusão</h2>
+  <ul>
+    <li><b>Chuva intensa + solo saturado + Região Serrana</b> formam o padrão de maior risco.</li>
+    <li>O nível 'Crítico' responde por cerca de 78% dos óbitos, mostrando que a classificação de risco é coerente.</li>
+    <li><b>Recomendação:</b> antecipar alertas e preparo para novembro–dezembro, priorizando Petrópolis, Teresópolis e Nova Friburgo.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Tecnologias e funcionalidades</h2>
+  <div class="chips"><span>Python</span><span>Pandas</span><span>Matplotlib</span><span>Seaborn</span><span>Streamlit</span><span>Plotly</span><span>SQLAlchemy + SQLite</span><span>GitHub Pages</span></div>
+  <p>Funcionalidades avançadas: persistência em banco, mapa interativo, séries temporais com médias móveis e correlação estatística.</p>
+</section>
+</main>
+<footer><div class="wrap">Projeto individual — Avaliação G1. Base de dados simulada, uso didático.</div></footer>
+</body>
+</html>
