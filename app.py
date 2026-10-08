@@ -69,7 +69,7 @@ if meses_ch:
     df = df[df.periodo_chuvoso.str.startswith("Chuvoso")]
 
 # ---------------------------------------------------------------- cabeçalho
-st.title("🌧️ Chuvas e Deslizamentos no Estado do Rio de Janeiro")
+st.title("Chuvas e Deslizamentos no Estado do Rio de Janeiro")
 st.markdown(
     "**Problema:** o RJ sofre com deslizamentos de terra a cada temporada de chuvas. Este painel investiga **quanto a chuva "
     "explica os deslizamentos, onde os impactos se concentram e em que época do ano** (base simulada, 8 municípios, 2015–2024)."
