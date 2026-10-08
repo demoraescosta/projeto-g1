@@ -10,10 +10,10 @@ Projeto da Avaliação G1 de Análise e Visualização de Dados com Python.
 
 Analisa uma base simulada (960 linhas = 8 municípios × 120 meses) para responder: quanto a chuva explica os deslizamentos, onde os impactos se concentram e em que época do ano?
 
-## 🔗 Links
+## Links
 - Repositório: <https://github.com/demoraescosta/projeto-g1>
 - Página do projeto (GitHub Pages): `https://demoraescosta.github.io/projeto-g1/`
-- Dashboard (Streamlit Cloud): `https://SEU-APP.streamlit.app`
+- Dashboard (Streamlit Cloud): `https://projetolinguagemprogramacao-afqffujnhobakhtgkc425j.streamlit.app/`
 
 ## Principais resultados
 - Correlação chuva × ocorrências ≈ **0,82** (índice de solo ≈ 0,72).
