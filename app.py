@@ -175,7 +175,7 @@ with aba4:
     x = st.selectbox("Variável explicativa", ["chuva_mm", "chuva_acum_3m", "indice_solo", "umidade", "temperatura_media"])
     y = st.selectbox("Variável de impacto", ["ocorrencias_deslizamento", "desalojados", "obitos"])
     r = df[x].corr(df[y])
-    rs = df[x].corr(df[y], method="spearman")
+    rs = df[x].rank().corr(df[y].rank())  # Spearman = Pearson dos postos (sem scipy)
     st.metric(f"Correlação {x} × {y}", f"Pearson {r:.2f}", f"Spearman {rs:.2f}", delta_color="off")
     st.info("**Interpretação:** chuva (≈0,82) e índice de solo (≈0,72) são as variáveis mais associadas às ocorrências; "
             "temperatura e umidade quase não importam. Correlação não implica causalidade.")
